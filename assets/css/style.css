@@ -1,3 +1,8 @@
+@font-face {
+  font-family: CocoBikerRegularTrial;
+  src: url(../fonts/CocoBikerRegularTrial.ttf);
+}
+
 /* *RESET */
 * {
   margin: 0;
@@ -6,6 +11,16 @@
 }
 
 /* *GENERAL */
+:root {
+  color-scheme: light dark;
+
+  --light-bg: #fafafa;
+  --light-color: #1b1b1b;
+
+  --dark-bg: #1b1b1b;
+  --dark-color: #fafafa;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -14,5 +29,11 @@ a {
 }
 
 body {
-  background-color: #fafafa;
+  background-color: light-dark(var(--light-bg), var(--dark-bg));
+  color: light-dark(var(--light-color), var(--dark-color));
+}
+
+/* *COMPONENTS */
+h1 {
+  font-family: CocoBikerRegularTrial, Arial, Helvetica, sans-serif;
 }

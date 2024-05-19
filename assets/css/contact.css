@@ -1,0 +1,25 @@
+main {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  text-align: center;
+  padding: 5px;
+}
+
+main p {
+    border: solid red;
+  font-family: "Gruppo", Arial, Helvetica, sans-serif;
+  font-size: clamp(1.5rem, 0.5vw + 1rem, 2rem);
+}
+
+main h1 {
+    border: solid blue;
+  font-size: clamp(1.5rem, 2vw + 1rem, 4rem);
+}
+
+main h2 {
+  font-size: clamp(1.5rem, 0.5vw + 1rem, 2rem);
+
+}

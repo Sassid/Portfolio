@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&family=Whisper&display=swap");
+
 @font-face {
   font-family: CocoBikerRegularTrial;
   src: url(../fonts/CocoBikerRegularTrial.ttf);
@@ -12,7 +14,7 @@
 
 /* *GENERAL */
 :root {
-  color-scheme: light dark;
+  /* color-scheme: light dark; */
 
   --light-bg: #fafafa;
   --light-color: #1b1b1b;
@@ -26,14 +28,113 @@ html {
 }
 a {
   text-decoration: none;
+  color: light-dark(var(--light-color), var(--dark-color));
 }
 
 body {
   background-color: light-dark(var(--light-bg), var(--dark-bg));
   color: light-dark(var(--light-color), var(--dark-color));
+  height: 100vh;
 }
 
 /* *COMPONENTS */
-h1 {
-  font-family: CocoBikerRegularTrial, Arial, Helvetica, sans-serif;
+
+/* *HEADER */
+header {
+  /* border: solid purple; */
+  display: flex;
+  align-items: center;
+  height: 5vh;
+  padding: 20px;
+}
+.logo {
+  position: relative;
+  font-family: CocoBikerRegularTrial;
+  font-size: 25px;
+  transition: color, 300ms;
+}
+
+.logo:hover {
+  color: #24a5db;
+}
+
+/* *MAIN */
+.picdiv {
+  /* border: solid red; */
+  display: flex;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  width: 80%;
+  max-height: 60vh;
+  margin: auto;
+  /* margin-block: 30px; */
+}
+
+.picdiv img {
+  /* border: solid blue; */
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  text-align: center;
+  object-fit: contain;
+}
+
+.index-title {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: clamp(1.5rem, 2vw + 1rem, 4rem);
+}
+
+.index-paragraph {
+  font-family: "Gruppo", Arial, Helvetica, sans-serif;
+  font-size: clamp(1rem, 0.5vw + 1rem, 2rem);
+  text-align: center;
+  margin: 10px;
+  font-weight: lighter;
+}
+
+.button-triad {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  margin-block: 10vh;
+}
+
+.button-triad li {
+  list-style-type: none;
+  font-size: clamp(1rem, 0.5vw + 1rem, 2rem);
+  /* background-color: red; */
+  border-radius: 10px;
+  padding-inline: 20px;
+  padding-block: 10px;
+  font-family: sans-serif;
+}
+
+.button-triad li:first-child {
+  background: rgb(249, 198, 99);
+  background: linear-gradient(
+    -65deg,
+    rgba(249, 198, 99, 1) 0%,
+    rgba(254, 146, 196, 1) 35%,
+    rgba(30, 175, 210, 1) 100%
+  );
+}
+
+.button-triad li:nth-child(2) {
+  background: rgb(249, 198, 99);
+}
+
+.button-triad li:last-child {
+  background: rgb(249, 198, 99);
+  background: linear-gradient(
+    65deg,
+    rgba(249, 198, 99, 1) 0%,
+    rgba(254, 146, 196, 1) 35%,
+    rgba(30, 175, 210, 1) 100%
+  );
+}
+
+.button-triad a:hover {
+  color: white;
+  transition: color 300ms;
 }

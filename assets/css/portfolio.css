@@ -89,7 +89,6 @@
 
 .description a:hover {
   background-color: #1b1b1b;
-  /* transition: background-color, 1s; */
   color: rgb(249, 198, 99);
   transition: color 300ms, background-color 300ms;
 }
@@ -109,10 +108,13 @@ input:checked + label .description {
 
 .card[for="c1"] {
   background-image: url("../img/cards/preview-ff7remake.png");
+  background-position: center;
 }
 .card[for="c2"] {
   background-image: url("../img/cards/preview-product-page.png");
+  background-position: center;
 }
 .card[for="c3"] {
   background-image: url("../img/cards/preview-konoha.png");
+  background-position: center;
 }

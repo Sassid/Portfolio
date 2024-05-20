@@ -8,23 +8,87 @@ main {
   padding: 5px;
 }
 
-main p {
-    border: solid red;
-    /* width: 50%; */
-  font-family: "Gruppo", Arial, Helvetica, sans-serif;
-  /* font-size: clamp(1.5rem, 1vw + 1rem, 2rem); */
-  font-size: 20px;
-}
-
 main h1 {
-    border: solid blue;
+  /* border: solid blue; */
+  color: white;
   font-size: clamp(1.5rem, 2vw + 1rem, 4rem);
 }
 
 main h2 {
-  font-size: clamp(1.5rem, 1vw + 1rem, 2rem);
-
+  font-size: clamp(1.5rem, 1rem, 4rem);
+  padding: 2rem;
 }
+
+.wrapper {
+  max-width: 80%;
+  margin-inline: auto;
+  /* margin-block: 5rem; */
+}
+
+.diagonal1 {
+  position: relative;
+  padding-block: 5rem;
+}
+
+.diagonal1::after {
+  content: "";
+  background: linear-gradient(
+    -65deg,
+    rgba(249, 198, 99, 1) 0%,
+    rgba(254, 146, 196, 1) 35%,
+    rgba(30, 175, 210, 1) 100%
+  );
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  transform: skewY(-5deg);
+}
+
+.spikes {
+  position: relative;
+  padding-block: 5rem;
+  background: rgb(249, 198, 99);
+}
+
+.spikes::before,
+.spikes::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  background: purple;
+  -webkit-mask-image: url(../svg/triangle.svg);
+}
+
+.spikes::before {
+  top: 0;
+  left: 0;
+}
+
+.spikes::after {
+  bottom: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
+
+/* .diagonal2 {
+  position: relative;
+  padding-block: 8%;
+}
+
+.diagonal2::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    65deg,
+    rgba(249, 198, 99, 1) 0%,
+    rgba(254, 146, 196, 1) 35%,
+    rgba(30, 175, 210, 1) 100%
+  );
+  z-index: -1;
+  inset: 0;
+  transform: skewY(5deg);
+} */
 
 /* TODO */
 /* fix you last p (email) is not responsive */

@@ -1,4 +1,5 @@
 main {
+  width: 100%;
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -27,7 +28,7 @@ main h2 {
 
 .down-text {
   transform: translateX(100vw);
-  animation: appearFromRight 2s ease-out 3s forwards;
+  animation: appearFromRight 1.5s ease-out 3s forwards;
 }
 
 .wrapper {
@@ -37,7 +38,6 @@ main h2 {
 
 .diagonal1 {
   position: relative;
-  isolation: isolate;
   padding-block: 5rem;
   transform: translateX(-100vw);
   animation: tilt-in-right-1 1s ease-out 1.5s 1 normal forwards;
@@ -61,8 +61,8 @@ main h2 {
   position: relative;
   padding-block: 5rem;
   background: rgb(249, 198, 99);
-  display: none;
-  animation: focus-in-contract 2s ease-out 2s 1 normal forwards;
+  opacity: 0;
+  animation: focus-in-contract 1.8s ease-out 5s 1 normal forwards;
 }
 
 .spikes::before,
@@ -127,7 +127,6 @@ main h2 {
 
 @keyframes focus-in-contract {
   0% {
-    display: block;
     letter-spacing: 1em;
     filter: blur(12px);
     opacity: 0;
@@ -139,7 +138,6 @@ main h2 {
     opacity: 0;
   } */
   100% {
-    display: block;
     filter: blur(0);
     opacity: 1;
   }

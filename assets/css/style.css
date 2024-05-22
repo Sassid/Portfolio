@@ -60,6 +60,8 @@ header {
 
 /* *MAIN */
 .picdiv {
+  position: absolute;
+  top: -60vh;
   /* border: solid red; */
   display: flex;
   justify-content: center;

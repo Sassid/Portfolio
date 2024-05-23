@@ -43,18 +43,37 @@ body {
 header {
   /* border: solid purple; */
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 5vh;
-  padding: 20px;
+  padding: 20px 30px;
 }
 .logo {
-  position: relative;
+  /* position: relative; */
   font-family: "CocoBikerRegularTrial", Arial, Helvetica, sans-serif;
   font-size: 25px;
   transition: color, 300ms;
 }
 
 .logo:hover {
+  color: #24a5db;
+}
+
+.right-navigation-links {
+  display: flex;
+  gap: 70px;
+  font-size: 18px;
+  font-family: sans-serif;
+  transition: color, 300ms;
+}
+
+.about-contact {
+  font-size: 18px;
+  font-family: sans-serif;
+  transition: color, 300ms;
+}
+
+.about-contact:hover {
   color: #24a5db;
 }
 

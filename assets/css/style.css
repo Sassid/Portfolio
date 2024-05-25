@@ -34,22 +34,23 @@ a {
 body {
   background-color: light-dark(var(--light-bg), var(--dark-bg));
   color: light-dark(var(--light-color), var(--dark-color));
-  height: 100vh;
+  height: 100%;
 }
 
 /* *COMPONENTS */
 
 /* *HEADER */
 header {
-  /* border: solid purple; */
+  border: solid purple;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100vw;
   height: 5vh;
   padding: 20px 30px;
+  /* margin-bottom: 20px; */
 }
 .logo {
-  /* position: relative; */
   font-family: "CocoBikerRegularTrial", Arial, Helvetica, sans-serif;
   font-size: 25px;
   transition: color, 300ms;
@@ -164,5 +165,5 @@ footer p {
   font-size: clamp(0.5rem, 0.5vw + 0.8rem, 0.7rem);
   text-align: center;
   /* border: solid red; */
-  margin-top: 3vh;
+  margin-top: 3%;
 }
